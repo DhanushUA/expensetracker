@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <!-- Header -->
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+                <h2>Expense Tracker App</h2>
+                <p class="text-muted">Manage your Expenses</p>
+            </div>
+
+        </div>
+
+
+        <!-- Expense Form -->
+
+        <div class="card p-4 mb-4">
+
+            <h5 id="formTitle">Add Expense</h5>
+
+            <form id="ExpenseForm">
+
+                <input type="hidden" id="expenseIndex">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">Expense Name</label>
+
+                        <input type="text" id="Expname"
+                            class="form-control"
+                            placeholder="Enter expense name" required>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">Amount</label>
+
+                        <input type="text" id="Account"
+                            class="form-control"
+                            placeholder="Enter Account" required>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">Category</label>
+
+                        <input type="text" id="Expcategory"
+                            class="form-control"
+                            placeholder="Enter Category" required>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">Date</label>
+
+                        <input type="date" id="date"
+                            class="form-control" required>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+
+                    Add Expense
+
+                </button>
+
+
+                <button type="reset" class="btn btn-secondary">
+
+                    Clear
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="mb-3">
+
+            <input type="text" id="search"
+                class="form-control"
+                placeholder="Search expenses by category...">
+
+        </div>
+
+
+        <!-- Expense Table -->
+
+        <div class="card p-3">
+
+            <h5 class="mb-3">Expense Records</h5>
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Expense Name</th>
+
+                            <th>Amount</th>
+
+                            <th>Category</th>
+
+                            <th>Date</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="expenseTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
